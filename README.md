@@ -1,4 +1,4 @@
-# a-nimate
+# framation
 [![Build Status](https://travis-ci.org/trustyoo86/a-nimate.svg?branch=master)](https://travis-ci.org/trustyoo86/a-nimate)
 
 Animation utility plugin using javascript or jquery
