@@ -1,4 +1,4 @@
-<a name="Animate"></a>
+# a-nimate
 
 Animation utility plugin using javascript or jquery
 
