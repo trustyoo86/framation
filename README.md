@@ -1,133 +1,208 @@
-<a name="Ani"></a>
+<a name="Animate"></a>
 
-## Ani
+Animation utility plugin using javascript or jquery
+
+## Install
+
+* using npm
+```bash
+# npm
+npm install a-nimate --save
+# yarn
+yarn add a-nimate
+```
+
+* dowonload source & import script
+```html
+<!doctype html>
+<html>
+  <head>
+    <script src="path/to/a-nimate.min.js"></script>
+  </head>
+</html>
+```
+
+## Usage
+
+* html
+```html
+<div class="test"></div>
+```
+
+* javascript
+```javascript
+import Animate from 'a-nimate';
+// or
+const Animate = require('a-nimate');
+
+var ani = new Animate();
+
+ani
+  .set(document.querySelector('.test'), {left: '100px', time: 2000})  // test element move left 100px during 2seconds
+  .set(document.querySelector('.test'), {left: '200px', time: 2000})  // test element move left 200px during 2seconds after move left 100px
+```
+
+
+## Animate
 **Kind**: global class
 
-* [Ani](#Ani)
-    * [new Ani()](#new_Ani_new)
-    * [.this.isIE](#Ani.this.isIE) : <code>boolean</code>
-    * [.this.isAnimation](#Ani.this.isAnimation) : <code>boolean</code>
-    * [.this.enable](#Ani.this.enable) : <code>boolean</code>
-    * [.this.queue](#Ani.this.queue) : <code>Array</code>
-    * [.this.div](#Ani.this.div) : <code>boolean</code>
-    * [.this.cssEase](#Ani.this.cssEase) : <code>Object</code>
-    * [.this.transform](#Ani.this.transform) : <code>string</code>
-    * [.this.transition](#Ani.this.transition) : <code>string</code>
-    * [.this.transitionDuration](#Ani.this.transitionDuration) : <code>string</code>
-    * [.this.transitionTimingFunction](#Ani.this.transitionTimingFunction) : <code>string</code>
-    * [.this.transform3d](#Ani.this.transform3d) : <code>boolean</code>
-    * [.getVendorPropertyName()](#Ani.getVendorPropertyName) ⇒ <code>string</code>
-    * [.checkTransform3dSupport()](#Ani.checkTransform3dSupport) ⇒ <code>boolean</code>
-    * [.getTransform(style)](#Ani.getTransform) ⇒ <code>Object</code>
-    * [.clear()](#Ani.clear) ⇒ <code>Object</code>
-    * [.pause()](#Ani.pause) ⇒ <code>Object</code>
-    * [.play()](#Ani.play) ⇒ <code>Object</code>
-    * [.set()](#Ani.set) ⇒ <code>Object</code>
-    * [.destroy()](#Ani.destroy)
+* [Animate](#Animate)
+    * [new Animate()](#new_Animate_new)
+    * [.this.isIE](#Animate.this.isIE) : <code>boolean</code>
+    * [.this.isAnimation](#Animate.this.isAnimation) : <code>boolean</code>
+    * [.this.enable](#Animate.this.enable) : <code>boolean</code>
+    * [.this.queue](#Animate.this.queue) : <code>Array</code>
+    * [.this.div](#Animate.this.div) : <code>boolean</code>
+    * [.this.cssEase](#Animate.this.cssEase) : <code>Object</code>
+    * [.this.transform](#Animate.this.transform) : <code>string</code>
+    * [.this.transition](#Animate.this.transition) : <code>string</code>
+    * [.this.transitionDuration](#Animate.this.transitionDuration) : <code>string</code>
+    * [.this.transitionTimingFunction](#Animate.this.transitionTimingFunction) : <code>string</code>
+    * [.this.transform3d](#Animate.this.transform3d) : <code>boolean</code>
+    * [.getVendorPropertyName()](#Animate.getVendorPropertyName) ⇒ <code>string</code>
+    * [.checkTransform3dSupport()](#Animate.checkTransform3dSupport) ⇒ <code>boolean</code>
+    * [.getTransform(style)](#Animate.getTransform) ⇒ <code>Object</code>
+    * [.clear()](#Animate.clear) ⇒ <code>Object</code>
+    * [.pause()](#Animate.pause) ⇒ <code>Object</code>
+    * [.play()](#Animate.play) ⇒ <code>Object</code>
+    * [.set()](#Animate.set) ⇒ <code>Object</code>
+    * [.destroy()](#Animate.destroy)
 
-<a name="new_Ani_new"></a>
+<a name="new_Animate_new"></a>
 
-### new Ani()
+### new Animate()
 a-nimate class
 
-<a name="Ani.this.isIE"></a>
+<a name="Animate.this.isIE"></a>
 
-### Ani.this.isIE : <code>boolean</code>
+### Animate.this.isIE : <code>boolean</code>
 is IE browser
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.isAnimation"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.isAnimation"></a>
 
-### Ani.this.isAnimation : <code>boolean</code>
+### Animate.this.isAnimation : <code>boolean</code>
 animation operate
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.enable"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.enable"></a>
 
-### Ani.this.enable : <code>boolean</code>
+### Animate.this.enable : <code>boolean</code>
 animation enable
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.queue"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.queue"></a>
 
-### Ani.this.queue : <code>Array</code>
+### Animate.this.queue : <code>Array</code>
 animation queue
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.div"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.div"></a>
 
-### Ani.this.div : <code>boolean</code>
+### Animate.this.div : <code>boolean</code>
 animation target div
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.cssEase"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.cssEase"></a>
 
-### Ani.this.cssEase : <code>Object</code>
+### Animate.this.cssEase : <code>Object</code>
 css ease object
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.transform"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+**Properties**
 
-### Ani.this.transform : <code>string</code>
+| Name | Type | Description |
+| --- | --- | --- |
+| _default | <code>string</code> | ease |
+| in | <code>string</code> | ease-in |
+| out | <code>string</code> | ease-out |
+| in-out | <code>string</code> | ease-in-out |
+| snap | <code>string</code> | cubic-bezier(0,1,.5,1) |
+| easeOutCubic | <code>string</code> | cubic-bezier(.215,.61,.355,1) |
+| easeInOutCubic | <code>string</code> | cubic-bezier(.645,.045,.355,1) |
+| easeInCirc | <code>string</code> | cubic-bezier(.6,.04,.98,.335) |
+| easeOutCirc | <code>string</code> | cubic-bezier(.075,.82,.165,1) |
+| easeInOutCirc | <code>string</code> | cubic-bezier(.785,.135,.15,.86) |
+| easeInExpo | <code>string</code> | cubic-bezier(.95,.05,.795,.035) |
+| easeInOutExpo | <code>string</code> | cubic-bezier(1,0,0,1) |
+| easeInQuad | <code>string</code> | cubic-bezier(.55,.085,.68,.53) |
+| easeOutQuad | <code>string</code> | cubic-bezier(.25,.46,.45,.94) |
+| easeInOutQuad | <code>string</code> | cubic-bezier(.455,.03,.515,.955) |
+| easeInQuart | <code>string</code> | cubic-bezier(.895,.03,.685,.22) |
+| easeOutQuart | <code>string</code> | cubic-bezier(.165,.84,.44,1) |
+| easeInOutQuart | <code>string</code> | cubic-bezier(.77,0,.175,1) |
+| easeInQuint | <code>string</code> | cubic-bezier(.755,.05,.855,.06) |
+| easeOutQuint | <code>string</code> | cubic-bezier(.23,1,.32,1) |
+| easeInOutQuint | <code>string</code> | cubic-bezier(.86,0,.07,1) |
+| easeInSine | <code>string</code> | cubic-bezier(.47,0,.745,.715) |
+| easeOutSine | <code>string</code> | cubic-bezier(.39,.575,.565,1) |
+| easeInOutSine | <code>string</code> | cubic-bezier(.445,.05,.55,.95) |
+| easeInBack | <code>string</code> | cubic-bezier(.6,-.28,.735,.045) |
+| easeOutBack | <code>string</code> | cubic-bezier(.175, .885,.32,1.275) |
+| easeInOutBack | <code>string</code> | cubic-bezier(.68,-.55,.265,1.55) |
+
+<a name="Animate.this.transform"></a>
+
+### Animate.this.transform : <code>string</code>
 transform
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.transition"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.transition"></a>
 
-### Ani.this.transition : <code>string</code>
+### Animate.this.transition : <code>string</code>
 transition
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.transitionDuration"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.transitionDuration"></a>
 
-### Ani.this.transitionDuration : <code>string</code>
+### Animate.this.transitionDuration : <code>string</code>
 transition duration
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.transitionTimingFunction"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.transitionTimingFunction"></a>
 
-### Ani.this.transitionTimingFunction : <code>string</code>
+### Animate.this.transitionTimingFunction : <code>string</code>
 transition timing function
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.this.transform3d"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.this.transform3d"></a>
 
-### Ani.this.transform3d : <code>boolean</code>
+### Animate.this.transform3d : <code>boolean</code>
 transform 3d
 
-**Kind**: static property of [<code>Ani</code>](#Ani)
-<a name="Ani.getVendorPropertyName"></a>
+**Kind**: static property of [<code>Animate</code>](#Animate)
+<a name="Animate.getVendorPropertyName"></a>
 
-### Ani.getVendorPropertyName() ⇒ <code>string</code>
+### Animate.getVendorPropertyName() ⇒ <code>string</code>
 return prop name using browser engine
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>string</code> - prop name
-<a name="Ani.checkTransform3dSupport"></a>
+<a name="Animate.checkTransform3dSupport"></a>
 
-### Ani.checkTransform3dSupport() ⇒ <code>boolean</code>
+### Animate.checkTransform3dSupport() ⇒ <code>boolean</code>
 return support 3d transform
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>boolean</code> - transform3d support
-<a name="Ani.getTransform"></a>
+<a name="Animate.getTransform"></a>
 
-### Ani.getTransform(style) ⇒ <code>Object</code>
+### Animate.getTransform(style) ⇒ <code>Object</code>
 return target's transform to object
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>Object</code> - transform object
 
 | Param | Type | Description |
 | --- | --- | --- |
 | style | <code>Object</code> | style object |
 
-<a name="Ani.clear"></a>
+<a name="Animate.clear"></a>
 
-### Ani.clear() ⇒ <code>Object</code>
+### Animate.clear() ⇒ <code>Object</code>
 clear animation
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>Object</code> - Ani
 **Example**
 ```js
@@ -138,12 +213,12 @@ ani1
    .set(function () {
    });
 ```
-<a name="Ani.pause"></a>
+<a name="Animate.pause"></a>
 
-### Ani.pause() ⇒ <code>Object</code>
+### Animate.pause() ⇒ <code>Object</code>
 pause animation
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>Object</code> - Ani
 **Example**
 ```js
@@ -151,19 +226,19 @@ ani1
    .set({target, 'left', '50%'})
    .pause();
 ```
-<a name="Ani.play"></a>
+<a name="Animate.play"></a>
 
-### Ani.play() ⇒ <code>Object</code>
+### Animate.play() ⇒ <code>Object</code>
 play animation
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>Object</code> - Ani
-<a name="Ani.set"></a>
+<a name="Animate.set"></a>
 
-### Ani.set() ⇒ <code>Object</code>
+### Animate.set() ⇒ <code>Object</code>
 animation set
 
-**Kind**: static method of [<code>Ani</code>](#Ani)
+**Kind**: static method of [<code>Animate</code>](#Animate)
 **Returns**: <code>Object</code> - Ani
 **Example**
 ```js
@@ -190,9 +265,7 @@ ani1
     }
   })
 ```
-<a name="Ani.destroy"></a>
+<a name="Animate.destroy"></a>
 
-### Ani.destroy()
+### Animate.destroy()
 destory animate
-
-**Kind**: static method of [<code>Ani</code>](#Ani)

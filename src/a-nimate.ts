@@ -42,53 +42,46 @@ const $ = window.jQuery;
 /**
  * a-nimate class
  * 
- * @class Ani
+ * @class Animate
  */
-class Ani {
+class Animate {
   /**
    * is IE browser
-   * @memberof Ani
    * @type {boolean}
    */
   private isIE: boolean = navigator.userAgent.indexOf('MSIE') >= 0;
   /**
    * support jquery
-   * @membeof Ani
    * @type {boolean}
    */
   private supportJQuery: boolean = typeof window.jQuery != 'undefined';
   /**
    * animation operate
    * 
-   * @memberof Ani
    * @type {boolean}
    */
   private isAnimation: boolean = false;
   /**
    * animation enable
    * 
-   * @memberof Ani
    * @type {boolean}
    */
   private enable: boolean = true;
   /**
    * animation queue
    * 
-   * @memberof Ani
    * @type {Array}
    */
   private queue: Array<any> = [];
   /**
    * animation target div
    * 
-   * @memberof Ani
    * @type {boolean}
    */
   private div: HTMLDivElement = window.document.createElement('div');
   /**
    * css ease object
    * 
-   * @memberof Ani
    * @type {Object}
    * @property {string} _default ease
    * @property {string} in ease-in
@@ -152,7 +145,6 @@ class Ani {
   /**
    * transform
    * 
-   * @memberof Ani
    * @type {string}
    */
   private transform: string = this.getVendorPropertyName('transform');
@@ -161,7 +153,6 @@ class Ani {
   /**
    * transition
    * 
-   * @memberof Ani
    * @type {string}
    */
   private transition: string = this.getVendorPropertyName('transition');
@@ -169,7 +160,6 @@ class Ani {
   /**
    * transition duration
    * 
-   * @memberof Ani
    * @type {string}
    */
   private transitionDuration = this.getVendorPropertyName('transitionDuration');
@@ -177,7 +167,6 @@ class Ani {
   /**
    * transition timing function
    * 
-   * @memberof Ani
    * @type {string}
    */
   private transitionTimingFunction = this.getVendorPropertyName('transitionTimingFunction');
@@ -185,7 +174,7 @@ class Ani {
   /**
    * transform 3d
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @type {boolean}
    */
   private transform3d = this.checkTransform3dSupport();
@@ -198,20 +187,18 @@ class Ani {
   /**
    * return prop name using browser engine
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function getVendorPropertyName
    * @return {string} prop name 
    */
   getVendorPropertyName(prop) {
     if (prop in this.div.style) return prop;
     // browser prefix
-    const prefixes = ['Moz', 'Webkit', '0', 'ms'];
+    const prefixes = ['Moz', 'Webkit', 'O', 'ms'];
     // property
     const prop_ = prop.charAt(0).toUpperCase() + prop.substr(1);
     
-    if (prop in this.div.style) {
-      return prop;
-    }
+    if (prop in this.div.style) return prop;
 
     const self = this;
 
@@ -229,7 +216,7 @@ class Ani {
   /**
    * return support 3d transform
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function checkTransform3dSupport
    * @return {boolean} transform3d support
    */
@@ -242,7 +229,7 @@ class Ani {
   /**
    * return target's transform to object
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function getTransform
    * @param {Object} style style object
    * @return {Object} transform object
@@ -378,7 +365,7 @@ class Ani {
   /**
    * clear animation
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function clear
    * @return {Object} Ani
    * @example
@@ -398,7 +385,7 @@ class Ani {
   /**
    * pause animation
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function pause
    * @return {Object} Ani
    * @example
@@ -414,7 +401,7 @@ class Ani {
   /**
    * play animation
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function play
    * @return {Object} Ani
    */
@@ -427,7 +414,7 @@ class Ani {
   /**
    * animation set
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function set
    * @return {Object} Ani
    * @example
@@ -511,7 +498,7 @@ class Ani {
   /**
    * destory animate
    * 
-   * @memberof Ani
+   * @memberof Animate
    * @function destroy
    */
   destroy() {
@@ -519,4 +506,4 @@ class Ani {
   }
 }
 
-export default Ani;
+export = Animate;

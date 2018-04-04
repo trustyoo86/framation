@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitAny": false,
     "preserveConstEnums": true,
     "target": "es5",
@@ -14,8 +15,7 @@
     },
     "checkJs": false,
     "watch": true,
-    "allowJs": true,
-    "esModuleInterop": true
+    "allowJs": true
   },
   "include": [
     "src/**/*",

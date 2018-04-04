@@ -1,15 +1,20 @@
 {
   "name": "a-nimate",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "animate util using javascript and jquery",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
     "clean": "rimraf dist",
     "example": "nodemon example/server.js",
-    "dev": "yarn clean && NODE_ENV=development webpack --watch",
+    "dev": "NODE_ENV=development webpack --watch",
     "prod": "yarn clean && NODE_ENV=production webpack"
   },
+  "keywords": [
+    "animation",
+    "javascript",
+    "jquery"
+  ],
   "repository": "https://github.com/trustyoo86/a-nimate.git",
   "author": "kern",
   "license": "MIT",

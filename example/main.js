@@ -1,7 +1,9 @@
 $(function () {
   var testDiv = $('.test');
-  var ani = new Animate.default();
+  var ani = new Animate();
 
   ani
-    .set(testDiv[0], {left: '100px', time: 3500})
+    .set(testDiv[0], {time: 1500, left: '100px'})
+    .set(testDiv[0], {time: 1500, left: '50px'})
+    .set(testDiv[0], {time: 1500, left: '150px'});
 });
