@@ -44,7 +44,7 @@ const $ = window.jQuery;
  * 
  * @class Animate
  */
-class Animate {
+class Framation {
   /**
    * is IE browser
    * @type {boolean}
@@ -506,4 +506,4 @@ class Animate {
   }
 }
 
-export = Animate;
+export = Framation;

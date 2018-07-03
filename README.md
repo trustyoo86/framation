@@ -8,9 +8,9 @@ Animation utility plugin using javascript or jquery
 * using npm
 ```bash
 # npm
-npm install a-nimate --save
+npm install framation --save
 # yarn
-yarn add a-nimate
+yarn add framation
 ```
 
 * dowonload source & import script
@@ -18,7 +18,7 @@ yarn add a-nimate
 <!doctype html>
 <html>
   <head>
-    <script src="path/to/a-nimate.min.js"></script>
+    <script src="path/to/framation.min.js"></script>
   </head>
 </html>
 ```
@@ -32,11 +32,11 @@ yarn add a-nimate
 
 * javascript
 ```javascript
-import Animate from 'a-nimate';
+import Framation from 'framation';
 // or
-const Animate = require('a-nimate');
+const Framation = require('framation');
 
-var ani = new Animate();
+var ani = new Framation();
 
 ani
   .set(document.querySelector('.test'), {left: '100px', time: 2000})  // test element move left 100px during 2seconds
@@ -44,10 +44,10 @@ ani
 ```
 
 
-## Animate
+## Framation
 **Kind**: global class
 
-* [Animate](#Animate)
+* [Framation](#Framation)
     * [new Animate()](#new_Animate_new)
     * [.this.isIE](#Animate.this.isIE) : <code>boolean</code>
     * [.this.isAnimation](#Animate.this.isAnimation) : <code>boolean</code>
@@ -71,8 +71,8 @@ ani
 
 <a name="new_Animate_new"></a>
 
-### new Animate()
-a-nimate class
+### new Framation()
+Framation class
 
 <a name="Animate.this.isIE"></a>
 

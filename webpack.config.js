@@ -7,12 +7,12 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const config = {
   entry: {
-    'a-nimate': path.resolve(__dirname, 'src', 'a-nimate.ts'),
+    'framation': path.resolve(__dirname, 'src', 'Framation.ts'),
   },
   devtool: isProd ? false : '#source-map',
   plugins: [],
   output: {
-    filename: !isProd ? '[name]-bundle.js' : '[name].min.js',
+    filename: !isProd ? '[name].js' : '[name].min.js',
     path: path.resolve('./dist'),
     libraryTarget: 'umd',
     library: 'Animate'

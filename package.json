@@ -1,6 +1,6 @@
 {
   "name": "framation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "animate util using javascript and jquery",
   "main": "index.js",
   "scripts": {
