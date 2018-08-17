@@ -1,6 +1,6 @@
 {
   "name": "framation",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "animate util using javascript and jquery",
   "main": "index.js",
   "typings": "src/Framation.d.ts",
@@ -9,7 +9,7 @@
     "clean": "rimraf dist",
     "example": "nodemon example/server.js",
     "dev": "NODE_ENV=development webpack --watch",
-    "prod": "yarn clean && NODE_ENV=production webpack"
+    "prod": "npm run clean && NODE_ENV=production webpack"
   },
   "keywords": [
     "animation",
