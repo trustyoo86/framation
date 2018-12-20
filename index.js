@@ -1,1 +1,1 @@
-module.exports  = require('./dist/a-nimate.min');
+module.exports  = require('./dist/framation.min');

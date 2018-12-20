@@ -1,6 +1,6 @@
 $(function () {
   var testDiv = $('.test');
-  var ani = new Animate();
+  var ani = new Framation();
 
   ani
     .set(testDiv[0], {time: 1500, left: '100px'})

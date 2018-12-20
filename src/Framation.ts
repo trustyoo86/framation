@@ -506,4 +506,4 @@ class Framation {
   }
 }
 
-export = Framation;
+export default Framation;

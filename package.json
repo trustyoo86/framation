@@ -1,19 +1,20 @@
 {
   "name": "framation",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "animate util using javascript and jquery",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
     "clean": "rimraf dist",
     "example": "nodemon example/server.js",
-    "dev": "NODE_ENV=development webpack --watch",
-    "prod": "yarn clean && NODE_ENV=production webpack"
+    "dev": "webpack --config ./tools/dev.js --watch",
+    "prod": "webpack --config ./tools/prod.js"
   },
   "keywords": [
     "animation",
     "javascript",
-    "jquery"
+    "jquery",
+    "typescript"
   ],
   "repository": "https://github.com/trustyoo86/a-nimate.git",
   "author": "kern",
@@ -22,11 +23,11 @@
     "@types/chai": "^4.1.2",
     "@types/mocha": "^5.0.0",
     "app-module-path": "^2.2.0",
-    "awesome-typescript-loader": "^4.0.1",
+    "awesome-typescript-loader": "^5.2.1",
     "chai": "^4.1.2",
-    "eslint": "^4.19.1",
+    "eslint": "^5.10.0",
     "express": "^4.16.3",
-    "karma": "^2.0.0",
+    "karma": "^3.1.4",
     "karma-chai": "^0.1.0",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.4",
@@ -38,14 +39,16 @@
     "mocha": "^5.0.5",
     "nodemon": "^1.17.3",
     "should": "^13.2.1",
-    "sinon": "^4.4.9"
+    "sinon": "^7.2.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.5"
   },
   "dependencies": {
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "path": "^0.12.7",
-    "typescript": "^2.8.1",
-    "webpack": "3.10.0"
+    "typescript": "^3.2.2",
+    "webpack": "4.28.0"
   }
 }
