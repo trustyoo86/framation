@@ -6,6 +6,7 @@
   "typings": "src/Framation.d.ts",
   "scripts": {
     "test": "karma start",
+    "test:watch": "karma start --watch --singleRun=false",
     "clean": "rimraf dist",
     "example": "nodemon example/server.js",
     "dev": "webpack --config ./tools/dev.js --watch",
