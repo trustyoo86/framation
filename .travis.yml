@@ -17,4 +17,5 @@ cache:
 git:
   depth: 20
 script:
+  - npm run test
   - npm run prod
