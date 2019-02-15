@@ -1,9 +1,10 @@
 # .travis.yml
 language: node_js
 node_js:
-  - stable
+  - "8.10.0"
 before_install:
-  - npm install
+  - npm i -g npm@5.8.0
+  - yarn install
 branches:
   only:
     - master
@@ -16,4 +17,5 @@ cache:
 git:
   depth: 20
 script:
+  - npm run test
   - npm run prod

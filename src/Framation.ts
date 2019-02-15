@@ -54,7 +54,7 @@ class Framation {
    * support jquery
    * @type {boolean}
    */
-  private supportJQuery: boolean = typeof window.jQuery != 'undefined';
+  private supportJQuery: boolean = !!(typeof window.jQuery != 'undefined');
   /**
    * animation operate
    * 
@@ -200,17 +200,13 @@ class Framation {
     
     if (prop in this.div.style) return prop;
 
-    const self = this;
+    prefixes.forEach((prefix, idx) => {
+      const vendorProp = prefix + prop_;
 
-    console.log('prefixes', prefixes);
-
-    for(let idx = 0; idx < prefixes.length; ++idx) {
-      const vendorProp = prefixes[idx] + prop_;
-
-      if (vendorProp in self.div.style) {
+      if (vendorProp in this.div.style) {
         return vendorProp;
       }
-    }
+    })
   }
 
   /**
@@ -506,4 +502,4 @@ class Framation {
   }
 }
 
-export = Framation;
+export default Framation;

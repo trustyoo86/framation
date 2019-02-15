@@ -5,7 +5,7 @@ require('babel-register');
 
 'use strict'
 
-const webpackConfig = require('./webpack.config')
+const webpackConfig = require('./tools/dev')
 
 module.exports = function (config) {
   config.set({
@@ -23,7 +23,7 @@ module.exports = function (config) {
       '**/*.swp'
     ],
 
-    reporters: ['verbose', 'spec'],
+    reporters: ['verbose', 'spec', 'coverage'],
 
     failOnemptyTestSuite: false,
 
@@ -41,8 +41,12 @@ module.exports = function (config) {
     },
 
     preprocessors: {
-      'src/**/*.ts': ['webpack'],
+      'src/**/*.ts': ['webpack', 'coverage'],
       'test/**/*.spec.ts': ['webpack', 'sourcemap']
+    },
+    
+    coverageReporter: {
+      type: 'text',
     },
 
     port: 9876,
@@ -50,8 +54,6 @@ module.exports = function (config) {
     colors: true,
 
     logLevel: config.LOG_INFO,
-
-    autoWatch: true,
 
     browsers: ['PhantomJS'],
 
@@ -61,7 +63,7 @@ module.exports = function (config) {
       terminal: true
     },
 
-    singleRun: false,
+    singleRun: true,
 
     concurrency: Infinity
   })
