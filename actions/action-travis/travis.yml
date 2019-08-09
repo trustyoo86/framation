@@ -1,0 +1,21 @@
+# .travis.yml
+language: node_js
+node_js:
+  - "10.16.1"
+before_install:
+  - npm i -g npm@6.9.0
+  - yarn install
+branches:
+  only:
+    - master
+email:
+  on_failure: change
+  on_success: never
+cache:
+  directories:
+    - node_modules
+git:
+  depth: 20
+script:
+  - npm run test
+  - npm run prod
